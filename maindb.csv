@@ -1,6 +1,6 @@
 cancel	cancelar	Se_ha_cancelado_el_concierto.	The_concert_has_been_cancelled.
 reply	responder	Por_favor,_no_responda_a_este_mensaje	Please_do_not_reply_to_this_message.
-sign	firmar	No_olvides_firmar_la_carta.	Don't_forget_to_sign_the_letter.
+a_sign	firmar	No_olvides_firmar_la_carta.	Don't_forget_to_sign_the_letter.
 have	tener	She_has_two_borthers_and_three_sisters.	Ella_tiene_dos_hermanos_y_tres_hermanas.
 tell	decir	Prometió_decir_la_verdad.	She_promised_to_tell_the_truth.
 listen	escuchar	Para_empezar,_debemos_escuchar_cuidadosamente_lo_que_dicen.	To_begin_with,_we_should_listen_carefully_to_what_they_say.
@@ -26,12 +26,12 @@ go	ir	¿A_qué_hora_vas_a_clase_de_inglés?	What_time_do_you_go_to_English_class
 translate	traducir	¿Cómo_traducirías_\"siesta\"_al_inglés?	How_would_you_translate_\"siesta\"_into_English?
 organize	organizar	Estamos_organizando_una_fiesta_para_el_equipo.	We_are_organizing_a_party_for_the_team.
 dance	bailar	¿Quieres_bailar_conmigo?	Would_you_like_to_dance_with_me?
-clean	limpiar	Deberías_limpiar_tu_cuarto_después_del_colegio.	You_should_clean_your_room_after_school.
-hurt	dañar_/_herir	Si_digo_que_no,_le_heriré_sus_sentimientos.	If_I_say_no,_I_will_hurt_her_feelings.
+to clean	limpiar	Deberías_limpiar_tu_cuarto_después_del_colegio.	You_should_clean_your_room_after_school.
+hurt	dañar/herir	Si_digo_que_no,_le_heriré_sus_sentimientos.	If_I_say_no,_I_will_hurt_her_feelings.
 need	necesitar	Si_necesita_ayuda,_pídale_consejos_a_su_doctor.	If_you_need_help,_ask_your_doctor_for_advice.
 type	escribir_a_máquina	Ella_puede_escribir_a_máquina_más_rápido_que_él.	She_can_type_faster_than_him.
-know	saber_/_conocer	¿Cuántas_palabras_sabes?	How_many_words_do_you_know?
-drive	conducir	¿Por_qué_en_Inglaterra_se_conduce_por_la_izquierda?	Why_do_they_drive_on_the_left_in_England?
+know	saber/conocer	¿Cuántas_palabras_sabes?	How_many_words_do_you_know?
+drive	conducir/manejar	¿Por_qué_en_Inglaterra_se_conduce_por_la_izquierda?	Why_do_they_drive_on_the_left_in_England?
 try	intentar	Intenta_no_preocuparse_demasiado_por_su_hija.	He_tries_not_to_worry_too_much_about_his_daughter.
 teach	enseñar	Mi_padre_me_enseñó_a_conducir.	My_father_taught_me_to_drive.
 sleep	dormir	¿Cuántas_horas_duermes_cada_noche?	How_many_hours_do_you_sleep_each_night?
@@ -44,7 +44,7 @@ close/shut	cerrar	Antes_de_salir,_cierre_todas_las_ventanas.	Before_you_go_out,_
 turn_on	encender	Hay_un_botón_para_encender_la_TV.	There_is_a_button_to_turno_on_the_TV.
 sell	vender	Venden_su_casa_en_Londres_para_mudarse_a_Los_Angeles.	They_are_selling_their_house_in_London_to_move_to_Los_Angeles.
 fit	caber	Este_anillo_no_me_cabe_en_el_dedo.	This_ring_doesn't_fit_on_my_finger.
-count	contar	Si_se_enfada,_cuente_hasta_10_antes_de_reaccionar.	If_you_get_angry,_count_to_ten_before_reacting.
+to_count	contar	Si_se_enfada,_cuente_hasta_10_antes_de_reaccionar.	If_you_get_angry,_count_to_ten_before_reacting.
 fill	llenar	Si_llenas_la_botella_con_agua_de_la_fuente,_no_tendrás_sed.	if_you_fill_the_bottle_with_water_from_the_fountain,_you_won't_be_hungry.
 make_do	hacer	Debes_hacer_la_cama_y_ordenar_tu_cuarto.	You_must_make_your_bed_and_tidy_your_room.
 bring	traer	Traéte_unas_botellas_de_cerveza_a_la_fiesta.	Bring_some_bottles_of_beer_with_you_to_the_party.
@@ -52,7 +52,7 @@ believe	creer	Los_ateos_no_creen_en_Dios.	Atheists_do_not_believe_in_God.
 worry	preocuparse	No_te_preocupes,_tu_madre_vendrá_pronto.	Don't_worry,_your_motherwill_come_soon.
 play	jugar	Me_gusta_jugar_al_tenis.	I_like_playing_tennis.
 open	abrir	Usa_un_sacacorchos_para_abrir_la_botella_de_vino.	Use_a_corkscrew_to_open_the_bottle_of_wine.
-fall	caerse	Un_anciano_se_cayó_por_un_barranco.	An_old_man_fell_down_a_ravine.
+fall	caerse	el_anciano_se_cayó_por_un_barranco.	An_old_man_fell_down_a_ravine.
 wake_up	despertar	Normalmente_me_despierto_a_las_7:45.	I_normally_wake_up_at_7:45.
 can/be_able	poder	Si_quieres,_podemos_jugar_al_ajedrez.	If_you_want,_we_can_play_chess.
 work	trabajar	Trabajan_12_horas_al_día.	They_work_12_hours_a_day.
@@ -68,18 +68,18 @@ eat	comer	Los_vegetarianos_no_comen_carne.	Vegetarians_don't_eat.
 spend	gastar	Intentan_no_gastar_mucho_dinero.	They_are_trying_not_to_spend_much_money.
 explain	explicar	Tenemos_un_documento_legal_que_explica_nuestra_política.	We_have_a_legal_document_which_explains_our_policy.
 smoke	fumar	I_don't_smoke_any_more.	Ya_no_fumo.
-allow	permitir_/_dejar	No_se_permite_fumar.	Smoking_is_not_permitted.
-fly	volar	Un_pájaro_vuela_a_una_velocidad_de_5m/s.	A_bird_flies_at_a_speed_of_5m/s.
+allow	permitir/dejar	No_se_permite_fumar.	Smoking_is_not_permitted.
+fly	volar	el_pájaro_vuela_a_una_velocidad_de_5m/s.	A_bird_flies_at_a_speed_of_5m/s.
 change	cambiar	Hay_que_cambiar_muchas_cosas_en_este_país.	It_is_necessary_to_change_a_lot_of_things_in_this_country.
 say	decir	Los_chicos_dijeron_que_no_habían_visto_a_nadie.	The_boys_said_they_hadn't_seen_anyone.
 buy	comprar	Si_vas_al_supermercado,_compra_vino_tinto.	If_you_go_to_the_supermarket,_buy_some_red_wine.
-want	querer_-_desear	Quiero_viajar_por_todo_el_mundo.	I_want_to_travel_around_the_world.
+want	querer/desear	Quiero_viajar_por_todo_el_mundo.	I_want_to_travel_around_the_world.
 run	correr	Su_objetivo_es_correr_un_maratón.	His_goal_is_to_run_a_marathon.
 cough	toser	Cubre_tu_boca_cada_vez_que_toses.	Cover_your_mouth_whenever_you_cough.
 hear	oir	Tienes_que_hablar_más_fuerte:_no_te_oigo.	You_must_speak_louder:_I_can't_hear_you.
-use	utilizar_/_usar	Utiliza_una_escoba_para_barrer_el_suelo.	Use_a_broom_to_sweep_the_floor.
+use	utilizar/usar	Utiliza_una_escoba_para_barrer_el_suelo.	Use_a_broom_to_sweep_the_floor.
 cut	cortar	Corta_la_carne_con_un_cuchillo_muy_afilado.	Cut_the_meat_with_a_very_sharp_knife.
-draw	dibujar	Un_jugador_dibuja_una_imagen,_mientras_que_los_otros_tratan_de_adivinar_la_palabra.	One_player_draws_a_picture,_while_the_others_try_to_guess_the_word.
+draw	dibujar	el_jugador_dibuja_una_imagen,_mientras_que_los_otros_tratan_de_adivinar_la_palabra.	One_player_draws_a_picture,_while_the_others_try_to_guess_the_word.
 sit	sentarse	¡Siéntense,_por_favor,_y_dejen_de_hablar!	Please_sit_down_and_stop_talking.
 ask	preguntar	Los_periodistas_me_preguntan_siempre_lo_mismo	Journalists_always_ask_me_the_same_thing.
 write	escribir	Tardó_10_años_en_escribir_el_libro.	It_took_him_10_years_to_write_the_book.
@@ -87,32 +87,32 @@ spell	deletrear	¿Cómo_deletreas_tu_nombre?	How_do_you_spell_your_name?
 sing	cantar	Canta_muy_bien.	She_sings_very_well.
 finish	terminar	Terminé_de_pintar_la_casa_anoche.	I_finished_painting_the_house_last_night.
 talk	hablar	Deberíamos_hablar_sobre_la_política.	We_should_talk_about_politics.
-leave	salir_/_marcharse	Al_marcharse_de_la_casa,_no_olvides_cerrar_la_puerta.	When_leaving_the_house,_don't_forget_to_close_the_door.
+leave	salir/marcharse	Al_marcharse_de_la_casa,_no_olvides_cerrar_la_puerta.	When_leaving_the_house,_don't_forget_to_close_the_door.
 see	ver	Veamos_si_es_verdad.	Let's_see_if_it's_true.
 accommodation	alojamiento
 (bed)_sheets	las_sábanas
-a_complaint	una_reclamación
-a_double_bed	una_cama_de_matrimonio
-a_double_room	una_habitación_doble
-a_double-bedded_room	una_habitación_con_cama_de_matrimonio
-a_reservation_/_booking	una_reserva
-a_room_with_en_suite_bathroom	una_habitación_con_baño
-a_single_bed	una_cama_individual
-a_single_room	una_habitación_individual
-a_tip	una_propina
-a_twin-bedded_room	una_habitación_con_camas_gemelas
+a_complaint	la_reclamación
+a_double_bed	la_cama_de_matrimonio
+a_double_room	la_habitación_doble
+a_double-bedded_room	la_habitación_con_cama_de_matrimonio
+a_reservation/booking	la_reserva
+a_room_with_en_suite_bathroom	la_habitación_con_baño
+a_single_bed	la_cama_individual
+a_single_room	la_habitación_individual
+a_tip	la_propina
+a_twin-bedded_room	la_habitación_con_camas_gemelas
 air_conditioning	aire_acondicionado
 bar	el_bar
 bath	la_bañera
-bathrobe	un_albornoz
+bathrobe	el_albornoz
 bellboy	el_botones
 bill	la_cuenta
 blankets	las_mantas
-car_park_attendant_/_parking_lot_attendant	el_/_la_guardacoches
-comb	un_peine
+car_park_attendant/parking_lot_attendant	el/la_guardacoches
+comb	el_peine
 chambermaid	la_camarera_de_pisos
 dining_room	el_comedor
-elevator_/_lift	el_ascensor
+elevator/lift	el_ascensor
 first_(second/third/fourth)_floor	primera_(segunda/tercera/cuarta)_planta
 hair_dryer	el_secador_de_pelo
 heating	calefacción
@@ -128,42 +128,42 @@ pillow	la_almohada
 razor	la_máquina_de_afeitar
 receipt	la_factura
 reception	la_recepción
-receptionist	el_/_la_recepcionista
-refund	una_reembolsa
+receptionist	el/la_recepcionista
+refund	la_reembolsa
 restaurant	el_restaurante
 room_service	el_servicio_a_las_habitaciones
 shampoo	el_champú
 shower	la_ducha
-shower_cap	una_gorra_de_ducha
+shower_cap	la_gorra_de_ducha
 slippers	las_zapatillas
 soap	el_jabón
 soap_dispenser	la_jabonera
 stairs	las_escaleras
-tap_/_faucet	el_grifo
+tap/faucet	el_grifo
 to_iron	planchar
 to_pay_a_deposit_or_down_payment	dar_or_dejar_una_señal
 to_wash	lavar
 toilet	el_váter
 toilet_paper	el_papel_higiénico
 toothbrush	el_cepillo_de_dientes
-toothpaste	la_pasta_dentrífica_/_pasta_de_dientes
-towel	una_toalla
+toothpaste	la_pasta_dentrífica/pasta_de_dientes
+towel	la_toalla
 twin_beds	camas_gemelas
-waiter_/_waitress	el_camarero_/_la_camarera
+waiter/waitress	el_camarero/la_camarera
 washbasin	el_lavabo
 window	la_ventana
-a talk (offical)	la plática
-a talk (loose chat)	la charla
-a scold	el regaño
-ceo	 el gerente general
-furniture	el mueble
+a_talk_(offical)	la_plática
+a_talk_(loose_chat)	la_charla
+a_scold	el_regaño
+ceo	_el_gerente_general
+furniture	el_mueble
 disagree	rebatir
 probable	verosímil
-remote control	el mando a distancia
-to submit	someterse
+remote_control	el_mando_a_distancia
+to_submit	someterse
 comprehensive	comprensivo
-to commit	comprometerse
-lid cover	la tapa
-get to the point	ir al grano
+to_commit	comprometerse
+lid/cover	la_tapa
+get_to_the_point	ir_al_grano
 sensible	sensato
 behavior	comportamiento

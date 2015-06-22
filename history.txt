@@ -1,4 +1,9 @@
-[ERR!-2015-06-22 20:56:17] las zapatillas,
-[CORR-2015-06-22 20:56:22] reparar
-[CORR-2015-06-22 20:56:39] leer
-[ERR!-2015-06-22 20:56:43] cerrar,
+[ERR!-2015-06-22 22:10:58] las sábanas, (bed) sheets, ?
+[CORR-2015-06-22 22:11:06] peinar, comb,
+[ERR!-2015-06-22 22:11:12] limpiar, clean, limpio
+[CORR-2015-06-22 22:11:49] limpiar, clean,
+[ERR!-2015-06-22 22:11:53] las sábanas, (bed) sheets,
+[ERR!-2015-06-22 22:12:08] limpiar, clean,
+[ERR!-2015-06-22 22:12:12] limpiar, clean,
+[ERR!-2015-06-22 22:12:14] las sábanas, (bed) sheets, las sabánas
+[CORR-2015-06-22 22:12:28] las sábanas, (bed) sheets,

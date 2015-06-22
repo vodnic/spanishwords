@@ -14,7 +14,7 @@
 # 2015.06.22 vodnic                                                            #
 ################################################################################
 # Input file's format:
-# spa_word<tab>eng_word<tab>spanish_examp(optional)<tab>eng_examp(optional)<\n>
+# eng_word<tab>spa_word<tab>eng_examp(optional)<tab>spa_examp(optional)<\n>
 # Spaces should be replaced with underscore (_) character.
 # In two or more translations, they should be seperated with slash (/) 
 # character without spaces before and after.
@@ -42,34 +42,64 @@ checkArticle () {
     fi
 }
 
-# Link to wider description on wiktionary.
-# TODO: In case of multiword content, redirect to google translete instead 
-#       of wiktionary.
+# Link to wider description on wiktionary or google translate.
+# TODO: Case with mixed two definitions, one singleword, and second mulitword
+#       and/or one with article and second not.
 preapreLink () {
     LINK="http://en.wiktionary.org/wiki/$SPANISH_WORD#Spanish"
     if [ "$ARTICLE" != "" ]; then
         LINK="http://en.wiktionary.org/wiki/${SPANISH_WORD:$ARTICLE_LENGTH}#Spanish"
     fi
+
+    WORD_COUNT=$(echo $SPANISH_WORD | wc -w)
+    if [ "$ARTICLE" != "" ] && [ $WORD_COUNT -gt 2 ]; then
+        LINK="https://translate.google.pl/?hl=pl#es/en/$SPANISH_WORD"
+    fi
+    if [ "$ARTICLE" == "" ] && [ $WORD_COUNT -gt 1 ]; then
+        LINK="https://translate.google.pl/?hl=pl#es/en/$SPANISH_WORD"
+    fi
+    if [ "$SPANISH_SECOND" != "" ]; then
+        LINK="http://en.wiktionary.org/wiki/$SPANISH_SECOND#Spanish"
+    fi
 }
 
 # Prompt for word in spanish and verifies its correctness.
-# TODO: In case of multiple correct answers, assume that they are seperated
-#       with slash character (/) and accept any of them.
+# TODO: Case with mixed two definitions, one singleword, and second mulitword
+#       and/or one with article and second not.
 readAndVerifyWord () {
     DATE=$(date "+%Y-%m-%d %H:%M:%S")
+
+    if [[ "$SPANISH_WORD" == *"/"* ]]; then
+        SPANISH_FIRST=$(echo "$SPANISH_WORD" | cut -d"/" -f 1)
+        SPANISH_SECOND=$(echo "$SPANISH_WORD" | cut -d'/' -f 2)
+    fi
 
     INPUT=$(zenity --entry \
         --text="$ENGLISH_WORD $ARTICLE" \
         --title="Learn a word!")
 
-    if [ "$INPUT" = "$SPANISH_WORD" ]; then
+    if [ "$SPANISH_SECOND" != "" ]; then
+        if [ "$INPUT" == "$SPANISH_FIRST" ] || [ $INPUT == "$SPANISH_SECOND" ]; then
+            TYPE="info"
+            STATUS="Correct!"
+            LOG="[CORR-$DATE] $SPANISH_WORD, $ENGLISH_WORD,"
+        fi
+    fi
+    
+    if [ "$INPUT" == "$SPANISH_WORD" ]; then
         TYPE="info"
         STATUS="Correct!"
-        LOG="[CORR-$DATE] $SPANISH_WORD"
-    else
+        LOG="[CORR-$DATE] $SPANISH_WORD, $ENGLISH_WORD,"
+    fi
+    
+    if [ "$TYPE" == "" ]; then
         TYPE="error"
         STATUS="Wrong!"
-        LOG="[ERR!-$DATE] $SPANISH_WORD, $INPUT"
+        LOG="[ERR!-$DATE] $SPANISH_WORD, $ENGLISH_WORD, $INPUT"
+
+        ERROR_ENTRY="$ENGLISH_WORD\t$SPANISH_WORD\t$ENGLISH_EXAMPLE\t$SPANISH_EXAMPLE" 
+        ERROR_DB=$(echo "$ERROR_ENTRY" | sed -r 's/ /_/g')
+        echo -e "$ERROR_DB" >> db_errors.csv
     fi
 
     echo $LOG >> history.txt
