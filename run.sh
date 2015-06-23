@@ -6,9 +6,9 @@
 # user to input word in foreign language. User gets feedback if input was      #
 # correct and in both cases he is suppoerted with original word (and possibly) #
 # example sentences).                                                          #
-# All inertions are logged into file (default: history.txt).                   #
+# All insertions are logged into file (default: history.txt).                   #
 # One suppoerted argument is a file containing words.                          #
-# Script is dedicated to run with crontat in hourly schedule.                  #
+# Script is dedicated to run with crontab in hourly schedule.                  #
 #                                                                              #
 # przemek@videveritatis.pl                                                     #
 # 2015.06.22 vodnic                                                            #
@@ -63,12 +63,28 @@ preapreLink () {
     fi
 }
 
+# Save (or not) an event of insertin word by user to log file and error db.
+logEntry() {
+    if [ "$DISABLE_LOG" == "" ]; then
+        DATE=$(date "+%Y-%m-%d %H:%M:%S")
+        if [ "$TYPE" == "info" ]; then
+            LOG="[CORR-$DATE] $SPANISH_WORD, $ENGLISH_WORD,"
+        fi
+        if [ "$TYPE" == "error" ]; then
+            LOG="[ERR!-$DATE] $SPANISH_WORD, $ENGLISH_WORD, $INPUT"
+
+            ERROR_ENTRY="$ENGLISH_WORD\t$SPANISH_WORD\t$ENGLISH_EXAMPLE\t$SPANISH_EXAMPLE" 
+            ERROR_DB=$(echo "$ERROR_ENTRY" | sed -r 's/ /_/g')
+            echo -e "$ERROR_DB" >> db_errors.csv
+        fi
+        echo $LOG >> history.txt
+    fi
+}
+
 # Prompt for word in spanish and verifies its correctness.
 # TODO: Case with mixed two definitions, one singleword, and second mulitword
 #       and/or one with article and second not.
 readAndVerifyWord () {
-    DATE=$(date "+%Y-%m-%d %H:%M:%S")
-
     if [[ "$SPANISH_WORD" == *"/"* ]]; then
         SPANISH_FIRST=$(echo "$SPANISH_WORD" | cut -d"/" -f 1)
         SPANISH_SECOND=$(echo "$SPANISH_WORD" | cut -d'/' -f 2)
@@ -82,27 +98,18 @@ readAndVerifyWord () {
         if [ "$INPUT" == "$SPANISH_FIRST" ] || [ $INPUT == "$SPANISH_SECOND" ]; then
             TYPE="info"
             STATUS="Correct!"
-            LOG="[CORR-$DATE] $SPANISH_WORD, $ENGLISH_WORD,"
         fi
     fi
     
     if [ "$INPUT" == "$SPANISH_WORD" ]; then
         TYPE="info"
         STATUS="Correct!"
-        LOG="[CORR-$DATE] $SPANISH_WORD, $ENGLISH_WORD,"
     fi
     
     if [ "$TYPE" == "" ]; then
         TYPE="error"
         STATUS="Wrong!"
-        LOG="[ERR!-$DATE] $SPANISH_WORD, $ENGLISH_WORD, $INPUT"
-
-        ERROR_ENTRY="$ENGLISH_WORD\t$SPANISH_WORD\t$ENGLISH_EXAMPLE\t$SPANISH_EXAMPLE" 
-        ERROR_DB=$(echo "$ERROR_ENTRY" | sed -r 's/ /_/g')
-        echo -e "$ERROR_DB" >> db_errors.csv
     fi
-
-    echo $LOG >> history.txt
 }
 
 # Prepare text for a final message box.
@@ -129,6 +136,7 @@ main () {
     checkArticle $2
     
     readAndVerifyWord
+    logEntry
     preapreLink
     prepareText
 
@@ -143,6 +151,8 @@ main () {
 #       dev null destination at will. 
 
 FILE=$1
+DISABLE_LOG=$2
+
 if [ "$FILE" == "" ]; then
     FILE="maindb.csv"
 fi

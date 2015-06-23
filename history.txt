@@ -1,9 +1,4 @@
-[ERR!-2015-06-22 22:10:58] las sábanas, (bed) sheets, ?
-[CORR-2015-06-22 22:11:06] peinar, comb,
-[ERR!-2015-06-22 22:11:12] limpiar, clean, limpio
-[CORR-2015-06-22 22:11:49] limpiar, clean,
-[ERR!-2015-06-22 22:11:53] las sábanas, (bed) sheets,
-[ERR!-2015-06-22 22:12:08] limpiar, clean,
-[ERR!-2015-06-22 22:12:12] limpiar, clean,
-[ERR!-2015-06-22 22:12:14] las sábanas, (bed) sheets, las sabánas
-[CORR-2015-06-22 22:12:28] las sábanas, (bed) sheets,
+[CORR-2015-06-23 10:00:02] hablar, talk,
+[CORR-2015-06-23 12:00:02] decir, tell,
+[ERR!-2015-06-23 11:00:01] la habitación con cama de matrimonio, a double-bedded room, la cama gruema
+[CORR-2015-06-23 13:00:01] terminar, finish,
